@@ -1,19 +1,22 @@
-/* rfce */
-function NavBar(){
+import { MenuIcon } from "lucide-react";
+import CartWidget from "./CartWidget";
 
-    return(
-        <header className="bg-slate-950 p-5 flex justify-between place-items-center">
-            <h1 className="text-slate-50">Moov</h1>
-            <nav className="text-slate-50 hidden md:block">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        
-    )
+/* rfce */
+function NavBar() {
+  return (
+    <header className="flex justify-between p-5 bg-slate-950 text-slate-50">
+        <a id="titulo" className="text-2xl font-bold" href="#">MOOV</a>
+        <nav className="flex items-center gap-4">
+            <div className="items-center hidden md:flex md:gap-4">
+                <a href="#">Home</a>
+                <a href="#">Productos</a>
+                <a href="#">Contacto</a>
+            </div>
+            <MenuIcon className="w-6 h-6 md:hidden" />
+        </nav>
+      <CartWidget />
+    </header>
+  );
 }
 
-export default NavBar
+export default NavBar;
