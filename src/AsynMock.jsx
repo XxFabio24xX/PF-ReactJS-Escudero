@@ -1,8 +1,3 @@
-import React from "react";
-import { LoadingOutlined } from "@ant-design/icons";
-import { Spin } from "antd";
-
-
 const products = [
   {
     id: "1",
@@ -57,32 +52,31 @@ const products = [
   // Mas prodcutos...
 ];
 
-//Fijarse como incorporar spin
-//<Spin indicator={<LoadingOutlined style={{ fontSize: 24 }} spin />} />;
 export const getProducts = () => {
   return new Promise((resolve) => {
+
     setTimeout(() => {
       resolve(products);
-    }, 500)
+    }, 1000)
   });
 };
 
 export const getProductById = (productId) => {
   return new Promise((resolve) => {
+
     setTimeout(() => {
       resolve(products.find(prod => prod.id === productId))
       console.log("Detalle: ", products.find(prod => prod.id === productId))
-    }, 500)
+    }, 1000)
   }) 
 };
 
 export const getProductByMarca = (marca) => {
 
-  console.log(marca)
-
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(products.filter(prod => prod.marca === marca))
-    }, 500)
+    }, 1000)
   }) 
 };
+

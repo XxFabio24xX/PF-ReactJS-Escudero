@@ -6,7 +6,7 @@ import { NavLink, Link } from "react-router-dom";
 function NavBar() {
   return (
     <header className="flex justify-between p-5 bg-slate-950 text-slate-50">
-        <Link to="/" id="titulo" className="text-2xl font-bold">MOOV</Link>
+        <Link to="/" id="titulo" className="text-2xl font-bold"><img src="/logo.png" alt="logo" className="w-24"/></Link>
         <nav className="flex items-center gap-4">
             <div className="items-center hidden md:flex md:gap-4">
                 <NavLink to={"/marca/Adidas"}>Adidas</NavLink>
@@ -21,9 +21,3 @@ function NavBar() {
 }
 
 export default NavBar;
-
-/*
-<NavLink to={"/marca/adidas"} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Adidas</NavLink>
-<NavLink to={"/marca/nike"} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Nike</NavLink>
-<NavLink to={"/marca/converse"} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Converse</NavLink>
-*/

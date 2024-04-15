@@ -23,7 +23,7 @@ const Item = ({ id, name, imageSrc, imageAlt, price, marca, stock }) => {
       </div>
       <div className='text-sm flex justify-between align-center'>
         <h3>Stock disponible: {stock}</h3>
-        <Button><Link to={`/item/${id}`}>Detalle</Link></Button>
+        <Button><Link to={`/item/${id}`} className='Option'>Detalle</Link></Button>
       </div>
     </div>
   );
