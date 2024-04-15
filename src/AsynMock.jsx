@@ -78,9 +78,11 @@ export const getProductById = (productId) => {
 
 export const getProductByMarca = (marca) => {
 
+  console.log(marca)
+
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(products.find(prod => prod.marca === marca))
+      resolve(products.filter(prod => prod.marca === marca))
     }, 500)
   }) 
 };
