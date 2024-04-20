@@ -66,7 +66,6 @@ export const getProductById = (productId) => {
 
     setTimeout(() => {
       resolve(products.find(prod => prod.id === productId))
-      console.log("Detalle: ", products.find(prod => prod.id === productId))
     }, 1000)
   }) 
 };
