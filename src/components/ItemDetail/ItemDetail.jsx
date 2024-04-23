@@ -21,27 +21,25 @@ const ItemDetail = ({ id, name, imageSrc, imageAlt, price, marca, stock }) => {
   }
   
   return (
-    <Card style={{width: 400}}>
-      <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-100">
-        <img
-          src={imageSrc}
-          alt={imageAlt}
-          className="h-full w-auto object-cover object-center lg:h-full lg:w-full"
-        />
-      </div>
-      <div className="mt-4 flex justify-between">
+    <Card style={{width: 350}} bordered={false} className='bg-Baige' cover={
+      <img
+      src={imageSrc}
+      alt={imageAlt}
+      />
+    }>
+      <div className="flex justify-between">
         <div>
-          <h3 className="text-sm text-gray-700">
+          <h3 className="text-m text-Negro font-semibold">
             {name}
           </h3>
-          <p className="mt-1 text-sm text-gray-500">{marca}</p>
+          <p className="mt-1 text-sm text-gray">{marca}</p>
         </div>
         <p className="text-sm font-medium text-gray-900">{price}</p>
       </div>
       <div className='p-3 flex justify-center align-center'>
         {
           quantityAdded > 0 ? (
-            <Button><Link to={"/cart"} className="Option">Finalizar Compra</Link></Button>
+            <Button type="text" className='bg-Mogo text-White'><Link to={"/cart"} className="Option">Finalizar Compra</Link></Button>
           ) : (
             <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
           )

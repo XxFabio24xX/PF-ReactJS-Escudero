@@ -10,14 +10,14 @@ function App() {
   return (
     <BrowserRouter>
       <CartProvider>
-        <NavBar />
+        <NavBar/>
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/marca/:marca" element={<ItemListContainer />} />
           <Route path="/item/:itemId" element={<ItemDetailContainer />} />
           <Route path="*" element={ <Page><h1>404 NOT FOUND</h1></Page>}/>
         </Routes>
-        <Footer />
+        <Footer/>
       </CartProvider>
     </BrowserRouter>
   );
