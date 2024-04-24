@@ -4,7 +4,10 @@ import Footer from "./components/Footer";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Page from "./components/Page";
+import Cart from "./components/Cart/Cart";
+
 import { CartProvider } from "./context/CartContext";
+
 
 function App() {
   return (
@@ -15,7 +18,8 @@ function App() {
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/marca/:marca" element={<ItemListContainer />} />
           <Route path="/item/:itemId" element={<ItemDetailContainer />} />
-          <Route path="*" element={ <Page><h1>404 NOT FOUND</h1></Page>}/>
+          <Route path="/cart" element={<Cart/>}/>
+          <Route path="*" element={ <Page title="404 NOT FOUND"></Page>}/>
         </Routes>
         <Footer/>
       </CartProvider>

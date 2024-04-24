@@ -5,7 +5,7 @@ const products = [
     imageSrc:
       "https://www.moov.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dwf1769bf5/products/ADIE7217/ADIE7217-1.JPG",
     imageAlt: "Zapatillas Urbanas adidas Forum Low.",
-    price: "$171.999",
+    price: 171999,
     marca: "Adidas",
     stock: 10,
   },
@@ -15,7 +15,7 @@ const products = [
     imageSrc:
       "https://www.moov.com.ar/dw/image/v2/BDTF_PRD/on/demandware.static/-/Sites-365-dabra-catalog/default/dw4bcdd626/products/CO_157196C/CO_157196C-1.JPG?sw=600&sh=600",
     imageAlt: "Zapatillas Converse Chuck Taylor All Star Core Ox.",
-    price: "$89.499",
+    price: 89499,
     marca: "Converse",
     stock: 14,
   },
@@ -25,7 +25,7 @@ const products = [
     imageSrc:
       "https://www.moov.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw5d4602ac/products/NIDV0788-103/NIDV0788-103-1.JPG",
     imageAlt: "Zapatillas Urbanas adidas Forum Low.",
-    price: "$209.999",
+    price: 209999,
     marca: "Nike",
     stock: 17,
   },
@@ -35,7 +35,7 @@ const products = [
     imageSrc:
       "https://www.moov.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw1e132346/products/AD_EG4958/AD_EG4958-1.JPG",
     imageAlt: "Zapatillas Urbanas adidas Superstar Hombre",
-    price: "$183.999",
+    price: 183999,
     marca: "Adidas",
     stock: 15,
   },
@@ -45,7 +45,7 @@ const products = [
     imageSrc:
       "https://www.moov.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw166a7c9f/products/NIDH6927-161/NIDH6927-161-1.JPG",
     imageAlt: "Zapatillas Jordan Air 4 Retro Red Cement Hombre",
-    price: "$359.999",
+    price: 359999,
     marca: "Nike",
     stock: 4,
   },
@@ -57,7 +57,7 @@ export const getProducts = () => {
 
     setTimeout(() => {
       resolve(products);
-    }, 1000)
+    }, 500)
   });
 };
 
@@ -66,7 +66,7 @@ export const getProductById = (productId) => {
 
     setTimeout(() => {
       resolve(products.find(prod => prod.id === productId))
-    }, 1000)
+    }, 500)
   }) 
 };
 
@@ -75,7 +75,7 @@ export const getProductByMarca = (marca) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(products.filter(prod => prod.marca === marca))
-    }, 1000)
+    }, 500)
   }) 
 };
 

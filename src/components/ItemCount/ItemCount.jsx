@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Button, ConfigProvider, Space } from "antd";
-//import { MinusOutlined, PlusOutlined } from '@ant-design/icons';
+import { Button} from "antd";
 
 const ItemCount = ({ initial, stock, onAdd }) => {
   const [quantity, setQuantity] = useState(initial);

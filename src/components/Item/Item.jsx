@@ -17,7 +17,7 @@ const Item = ({ id, name, imageSrc, imageAlt, price, marca, stock }) => {
           </h3>
           <p className="mt-1 text-sm text-gray">{marca}</p>
         </div>
-        <p className="text-sm font-medium text-gray-900">{price}</p>
+        <p className="text-sm font-medium text-gray-900">${price}</p>
       </div>
       <div className='text-sm flex justify-between align-center'>
         <h3>Stock disponible: {stock}</h3>
