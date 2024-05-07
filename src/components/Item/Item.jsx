@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Item = ({ id, name, imageSrc, imageAlt, price, marca, stock }) => {
   return (
-    <Card bordered={false} className='bg-Baige' cover={
+    <Card bordered={false} className='bg-Baige hover:ring-2 hover:scale-105 ring-Mogo' cover={
       <img
       src={imageSrc}
       alt={imageAlt}
@@ -21,7 +21,7 @@ const Item = ({ id, name, imageSrc, imageAlt, price, marca, stock }) => {
       </div>
       <div className='text-sm flex justify-between align-center'>
         <h3>Stock disponible: {stock}</h3>
-        <Button type="text" className="bg-Mogo text-White"><Link to={`/item/${id}`} className='Option'>Detalle</Link></Button>
+        <Button type="text" className="bg-Mogo text-White hover:ring-2 ring-Mogo"><Link to={`/item/${id}`} className='Option'>Detalle</Link></Button>
       </div>
     </Card>
   );

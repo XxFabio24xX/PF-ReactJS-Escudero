@@ -1,4 +1,3 @@
-import 'boxicons';
 import Page from "../Page";
 
 

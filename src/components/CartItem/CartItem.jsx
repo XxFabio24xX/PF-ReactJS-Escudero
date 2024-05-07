@@ -6,7 +6,7 @@ const CartItem = ({ id, name, price, imageSrc, imageAlt, quantity }) => {
     const { removeItem } = useContext(CartContext)
 
     return(
-        <div className="mt-3 rounded-lg bg-Baige">
+        <div className="mt-6 rounded-lg bg-Baige outline outline-2 outline-Mogo">
             <div className="grid grid-cols-6 gap-4 items-center">
                 <div className="">
                     <img src={imageSrc} alt={imageAlt} className="rounded-lg"/>
@@ -19,7 +19,7 @@ const CartItem = ({ id, name, price, imageSrc, imageAlt, quantity }) => {
                     <p>Cantidad: {quantity}</p>
                     <p className="font-semibold pt-16">SubTotal: ${price * quantity}</p>
                 </div>
-                <div className="justify-self-center">
+                <div className="justify-self-center hover:scale-105">
                     <Button onClick={() => removeItem(id)} danger ghost>Eliminar</Button>
                 </div>
             </div>

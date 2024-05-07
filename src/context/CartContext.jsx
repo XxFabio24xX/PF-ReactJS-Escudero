@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { toast } from "react-toastify";
 
 export const CartContext = createContext({
     cart: [],
@@ -14,10 +15,10 @@ export const CartProvider = ({ children }) => {
     const [totalQuantity, setTotalQuantity] = useState(0);
     const [total, setTotal] = useState(0);
     
-    console.log(cart)
 
     const addItem = (item, quantity) => {
         if(!isInCart(item.id)) {
+            toast.success(`Se agrego al carrito`)
             setCart(prev => [...prev, {...item, quantity}])
             setTotalQuantity(prev => prev + quantity);
             setTotal(prev => prev + item.price * quantity);
@@ -28,6 +29,7 @@ export const CartProvider = ({ children }) => {
 
     const removeItem = (itemId) => {
         const cartUpdate = cart.filter((prod) => prod.id!== itemId);
+        toast.error('Se elimino el producto')
         setCart(cartUpdate);
         setTotalQuantity(prev => prev - cart.find((prod) => prod.id === itemId).quantity);
         setTotal(prev => prev - cart.find((prod) => prod.id === itemId).price * cart.find((prod) => prod.id === itemId).quantity);

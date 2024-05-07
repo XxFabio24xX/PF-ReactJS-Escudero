@@ -21,7 +21,7 @@ const ItemDetail = ({ id, name, imageSrc, imageAlt, price, marca, stock }) => {
   }
   
   return (
-    <Card style={{width: 350}} bordered={false} className='bg-Baige' cover={
+    <Card style={{width: 350}} bordered={false} className='bg-Baige hover:ring-2 ring-Mogo shadow-lg' cover={
       <img
       src={imageSrc}
       alt={imageAlt}
@@ -39,7 +39,7 @@ const ItemDetail = ({ id, name, imageSrc, imageAlt, price, marca, stock }) => {
       <div className='p-3 flex justify-center align-center'>
         {
           quantityAdded > 0 ? (
-            <Button type="text" className='bg-Mogo text-White'><Link to={"/cart"} className="Option">Finalizar Compra</Link></Button>
+            <Button type="text" className='bg-Mogo text-White hover:ring-2 ring-Mogo'><Link to={"/cart"} className="Option">Finalizar Compra</Link></Button>
           ) : (
             <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
           )

@@ -30,7 +30,7 @@ const Cart = () => {
             </div>
             <div className="flex justify-between">
                 <Button type="primary" danger onClick={() => clearCart()}>Vaciar carrito</Button>
-            <Button><Link to='/checkout'>Checkout</Link></Button>
+            <Button><Link to='/checkout'>Finalizar Compra</Link></Button>
             </div>
         </Page>
     )

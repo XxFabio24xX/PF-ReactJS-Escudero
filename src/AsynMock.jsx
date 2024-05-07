@@ -1,4 +1,4 @@
-const products = [
+/*const products = [
   {
     id: "1",
     name: "Zapatillas Urbanas adidas Forum Low",
@@ -51,7 +51,7 @@ const products = [
   },
   // Mas prodcutos...
 ];
-
+*/
 export const getProducts = () => {
   return new Promise((resolve) => {
 
