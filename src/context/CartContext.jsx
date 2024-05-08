@@ -39,7 +39,6 @@ export const CartProvider = ({ children }) => {
         setCart([]);
         setTotalQuantity(0);
         setTotal(0);
-        console.log("se vacio el carrito");
     };
 
     const isInCart = (itemId) => {
@@ -54,4 +53,3 @@ export const CartProvider = ({ children }) => {
         </CartContext.Provider>
     )
 }
-

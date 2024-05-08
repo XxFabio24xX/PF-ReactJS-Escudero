@@ -2,8 +2,7 @@ import React, { useContext } from 'react'
 import { Badge } from 'antd';
 import { CartContext } from '../context/CartContext';
 import { Link } from 'react-router-dom';
-import 'boxicons'
-
+import 'boxicons';
 
 function CartWidget() {
   const { totalQuantity } = useContext(CartContext);

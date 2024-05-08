@@ -5,12 +5,12 @@ const CheckoutForm = ({ onConfirm }) => {
     const [phone, setPhone] = useState('')
     const [email, setEmail] = useState('')
 
+
     const handleConfirm = (event) => {
         event.preventDefault()        
         const userData = {
             name, phone, email
         }
-        console.log(userData)
         onConfirm(userData)
     }
     
@@ -72,7 +72,7 @@ const CheckoutForm = ({ onConfirm }) => {
                 htmlFor="number"
                 className="block text-sm font-medium leading-6 text-White"
               >
-                Numero: 
+                Numero de teléfono: 
               </label>
             </div>
             <div className="mt-2">
