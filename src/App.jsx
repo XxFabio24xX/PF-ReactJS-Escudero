@@ -6,7 +6,6 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import Page from "./components/Page";
 import Cart from "./components/Cart/Cart";
 import Checkout from "./components/CheckOut/Checkout";
-
 import { CartProvider } from "./context/CartContext";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';

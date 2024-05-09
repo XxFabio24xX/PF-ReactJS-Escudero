@@ -3,8 +3,7 @@ import CheckoutForm from "../CheckoutForm/CheckoutForm";
 import Page from "../Page";
 import { CartContext } from "../../context/CartContext";
 import { db } from "../../firebaseConfig";
-import { collection, addDoc, serverTimestamp, writeBatch, getDoc, query, documentId, where, doc } from "firebase/firestore";
-import CartItem from "../CartItem/CartItem";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { Button } from "antd";
 import { Link } from "react-router-dom";
 
